@@ -25,6 +25,8 @@
 \usepackage{times}
 
 
+
+
 %\usepackage{auto-pst-pdf} % Enables the psfrag tool
 %\usepackage{psfrag}% Enables the psfrag tool
 \usepackage{psfrag}
@@ -90,3 +92,13 @@
    pdfcreator=pdflatex,
    pdfproducer=pdflatex
 }
+
+
+\let\oldquote\quote
+\let\endoldquote\endquote
+
+\RenewDocumentEnvironment{quote}{om}
+  {\oldquote}
+  {\par\nobreak\smallskip
+   \hfill(#2\IfValueT{#1}{~---~#1})\endoldquote 
+   \addvspace{\bigskipamount}}
