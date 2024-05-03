@@ -22,6 +22,10 @@
 \usepackage{amsfonts}
 \usepackage{eso-pic}
 \usepackage{transparent}
+\usepackage{times}
+\usepackage{tikz}
+
+
 
 
 %\usepackage{auto-pst-pdf} % Enables the psfrag tool
@@ -89,3 +93,16 @@
    pdfcreator=pdflatex,
    pdfproducer=pdflatex
 }
+
+
+\let\oldquote\quote
+\let\endoldquote\endquote
+
+\RenewDocumentEnvironment{quote}{om}
+  {\oldquote}
+  {\par\nobreak\smallskip
+   \hfill(#2\IfValueT{#1}{~---~#1})\endoldquote 
+   \addvspace{\bigskipamount}}
+
+
+\usetikzlibrary{positioning, arrows.meta}

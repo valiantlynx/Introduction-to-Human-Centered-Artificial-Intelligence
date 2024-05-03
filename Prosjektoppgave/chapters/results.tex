@@ -1,1 +1,33 @@
-\chapter{Results on ...}
+\chapter{Results}
+\subsection{Results and Discussion}
+So, I sent in at it at least 12 images for each category, just to see the basic stats like accuracy, and confidence. What do you know? It nailed the accuracy on the training set images—like a perfect 100\%. It's good at what it learned, which was to be expected. But then, it was time to make this more interesting, let’s make this a bit more interesting. 
+
+I tested it with some tricky images from Google, trying to trip it up a bit, and true? It stumbled sometimes. I used images of asses mostly but placed them in different settings to really push the limits. When the background was grassy or dry, the model thought the donkey was a kangaroo. When there was a noticeable hanging stomach, it guessed cow, and with mountainous or forest backgrounds, it went with deer. Interestingly, it never guessed horse, which would be the closest. So i investigated the training data for horses a bit. Turns out, in the training set, the horses were mostly either vibrant brown or white - and other vibrant colors, never the grey shades like those of a donkey. This little experiment showed the model does what it’s supposed to—extract features and recognize them, but only within the context it was trained on.
+
+When it comes tweaking things. I played around with different settings in the "Advanced" options—things like tweaking the number of training epochs. Increasing the epochs did bump up the accuracy initially, but then it plateaued, and going too long actually started to hurt the performance. This is the same with what I've learned about potential overfitting—too much learning isn't always a good thing.
+
+\subsubsection{What Worked and What Didn't}
+I have a few examples to show this off:
+\begin{itemize}
+    \item \textbf{correct clasification:} There were cases where the model was spot on. I’ll put those images right here in the report, and you can see how it got them right. it was the very different animals like birds, elephant etc.
+    \item \textbf{Misclassifications:} Then there were the misfires. Like the donkey-dressed-as-a-deer kind of mistakes. I’ll show these too, along with a discussion on why it probably messed up. the similar animals like deer, horse and shockingly kangaroo
+    \item \textbf{Weird Stuff:} And for fun, I threw in some totally unrelated images just to see what it would do. The results were as mentioned before
+\end{itemize}
+
+\subsubsection{Ethical and Practical Challenges}
+Discussing ethics,
+Here are three ethical challenges with this model:
+\begin{enumerate}
+    \item \textbf{Bias in Training Data:}
+    \item \textbf{Misuse of Technology:}
+    \item \textbf{Data Privacy:} Where and how we source our images could should be thought about extensively.
+\end{enumerate}
+
+this model has big potentions here are some just to mention afew:
+\begin{enumerate}
+    \item More diverse data, especially with color variations.
+    \item Maybe tweaking the neural network architecture itself, adding some layers or playing around with the dropout rate.
+    \item also better curating of data. like in the case of hose i dint notice until the model was trained because the issue with the data what unnoticable normally
+\end{enumerate}
+
+our model is decent at recognizing stuff, as long as it's stuff it has seen in somewhat similar contexts before. But throw something different, and it’s a bit of a coin toss.
